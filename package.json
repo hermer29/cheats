@@ -1,0 +1,9 @@
+{
+  "name": "com.hermer29.cheats",
+  "version": "1.0.0",
+  "displayName": "Cheats",
+  "type": "library",
+  "description": "Library to simplify the creation of cheats for testing and debugging features",
+  "license": "MIT",
+  "samples": []
+}
