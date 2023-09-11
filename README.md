@@ -1,6 +1,11 @@
 # cheats
 Library to simplify the creation of cheats for testing and debugging features
 
+# Installation
+
+To install the package, you can add it in package manager using the git url: 
+
+`https://github.com/hermer29/cheats.git#v1.0.0`
 
 # Quick Start
 
