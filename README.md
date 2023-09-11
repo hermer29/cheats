@@ -30,7 +30,7 @@ You can redefine the key to which the cheat menu will open by passing the KeyCod
 
 ## Cockpit
 
-Cockpit is a feature that allows you to display key-value pairs in the cheat menu (replacing `Debug.Log`). This feature can be used only after calling the `Cheats.Create`.
+Cockpit is a feature that allows you to display key-value pairs in the cheat menu (replacing `Debug.Log` sometimes). This feature can be used only after calling the `Cheats.Create`.
 
 ```csharp
 Cockpit.SetReadOnly(key, value);
