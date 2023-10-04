@@ -4,5 +4,6 @@
     {
         public int EndPosition;
         public ICheatHandler Handler;
+        public bool FullyDetected;
     }
 }

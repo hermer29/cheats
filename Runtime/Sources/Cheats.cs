@@ -81,6 +81,25 @@ namespace Hermer29.Cheats
             ICheatHandler handler = _cheatHandlers.Detect(value);
             if (handler != null)
             {
+                if (handler is IParametrizedCheatHandler parametrized)
+                {
+                    return;
+                }
+                handler?.Execute();
+                s_view.CheatsView.ClearField();
+            }
+        }
+
+        public void NotifySubmitClicked(string fieldText)
+        {
+            ICheatHandler handler = _cheatHandlers.Detect(fieldText);
+            if (handler != null)
+            {
+                if (handler is IParametrizedCheatHandler parametrized)
+                {
+                    parametrized.Execute(fieldText.Split(' ').Skip(1).ToArray());
+                    return;
+                }
                 handler?.Execute();
                 s_view.CheatsView.ClearField();
             }

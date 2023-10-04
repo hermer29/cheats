@@ -10,6 +10,7 @@ namespace Hermer29.Cheats
 
         [SerializeField] private InputField _field;
         [SerializeField] private Transform _root;
+        [SerializeField] private Button _submit;
         
         private bool _enabled;
 
@@ -21,7 +22,9 @@ namespace Hermer29.Cheats
 
         private void Start()
         {
+            _submit.gameObject.SetActive(false);
             _field.onValueChanged.AddListener(OnValueChanged);
+            _submit.onClick.AddListener(() => _cheats.NotifySubmitClicked(_field.text));
         }
 
         private void OnValueChanged(string value)
@@ -58,6 +61,13 @@ namespace Hermer29.Cheats
             StartCoroutine(WaitForObjectActivation());
         }
 
+        public void SetSubmitActive(bool active)
+        {
+            _submit.gameObject.SetActive(active);
+        }
+
         public void ClearField() => _field.text = "";
+
+        public void SetField(string cheat) => _field.text = cheat + " ";
     }
 }

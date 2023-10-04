@@ -20,6 +20,7 @@ namespace Hermer29.Cheats
         {
             CheatsView.Initialize(instance);
             CockpitSuperView.Construct();
+            PredictionsView.Construct(CheatsView);
         }
     }
 }

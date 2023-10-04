@@ -1,9 +1,16 @@
 {
   "name": "com.hermer29.cheats",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "displayName": "Cheats",
   "type": "library",
   "description": "Library to simplify the creation of cheats for testing and debugging features",
   "license": "MIT",
-  "samples": []
+  "samples": [],
+  "scopedRegistries": [
+    {
+    "name": 
+  }]
+  "dependencies": {
+    "com.hermer29.foundation":"https://github.com/Hermer29/foundation.git#1.0.1"
+  }
 }

@@ -25,13 +25,5 @@ namespace Hermer29.Cheats.DebugValues
             
             _sReadOnlyModel.SetValue(key, value);
         }
-
-        public static void Set(string key, object value)
-        {
-            if (_isConstructed == false)
-                throw new InvalidOperationException("Create cheat menu by calling Cheats.Create() at first");
-
-            
-        }
     }
 }

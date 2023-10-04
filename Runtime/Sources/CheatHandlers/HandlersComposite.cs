@@ -48,7 +48,8 @@ namespace Hermer29.Cheats
                 yield return new Match
                 {
                     EndPosition = match.Groups[0].Length,
-                    Handler = cheatHandler
+                    Handler = cheatHandler,
+                    FullyDetected = codePart.StartsWith(cheatHandler.GetCheatCode())
                 };
             }
         }
@@ -57,7 +58,7 @@ namespace Hermer29.Cheats
         {
             foreach (ICheatHandler cheatHandler in _handlers)
             {
-                if (string.Equals(cheatHandler.GetCheatCode(), code, StringComparison.CurrentCultureIgnoreCase))
+                if (code.ToLower().StartsWith(cheatHandler.GetCheatCode().ToLower()))
                 {
                     return cheatHandler;
                 }
