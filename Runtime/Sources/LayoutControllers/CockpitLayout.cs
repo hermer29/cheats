@@ -42,11 +42,14 @@ namespace Hermer29.Cheats.UiComponent
                 {
                     height += rect.rect.height + _spacing.y;
                     sumWidth = _marginLeft;
-                    var prev = castChildren[i - 1];
-                    var prevRect = prev.GetComponent<RectTransform>();
-                    var prevAnchoredPosition = prevRect.anchoredPosition;
-                    prevAnchoredPosition.x = width - prevRect.rect.width - _marginRight;
-                    prevRect.anchoredPosition = prevAnchoredPosition;
+                    if (i > 0)
+                    {
+                        var prev = castChildren[i - 1];
+                        var prevRect = prev.GetComponent<RectTransform>();
+                        var prevAnchoredPosition = prevRect.anchoredPosition;
+                        prevAnchoredPosition.x = width - prevRect.rect.width - _marginRight;
+                        prevRect.anchoredPosition = prevAnchoredPosition;
+                    }
                 }
                 rect.anchorMin = Vector2.zero;
                 rect.anchorMax = Vector2.zero;
